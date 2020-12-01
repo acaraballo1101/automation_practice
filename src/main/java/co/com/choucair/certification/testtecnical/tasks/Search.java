@@ -28,9 +28,9 @@ public class Search implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Click.on(SearchItemPage.BTN_WOMEN),
                 Enter.theValue(testTecnicalData.get(0).getStrPrenda()).into(SearchItemPage.CAJA_BUSQUEDA),
-                Click.on(SearchItemPage.BOTON_BUSCAR),
+                Click.on(SearchItemPage.BOTON_BUSCAR)
 
-                //Seleccionar Productos
+                /*Seleccionar Productos
                 MoveMouse.to(SearchItemPage.MOVER_MOUSE_ART_1),
                 Click.on(SearchItemPage.CLIC_EN_ADDTOCART_ART_1),
                 Click.on(SearchItemPage.CONTINUAR_COMPRA),
@@ -46,7 +46,7 @@ public class Search implements Task {
                 Click.on(SearchItemPage.TERMINOS_CONDICIONES),
                 Click.on(SearchItemPage.CHECKOUT_SHIPPING),
                 Click.on(SearchItemPage.TIPO_DE_PAGO),
-                Click.on(SearchItemPage.CONFIRMAR_PEDIDO)
+                Click.on(SearchItemPage.CONFIRMAR_PEDIDO)*/
 
         );
 

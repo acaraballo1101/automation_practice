@@ -2,9 +2,7 @@ package co.com.choucair.certification.testtecnical.stepdefinitions;
 
 import co.com.choucair.certification.testtecnical.model.TestTecnicalData;
 import co.com.choucair.certification.testtecnical.questions.Answer;
-import co.com.choucair.certification.testtecnical.tasks.Login;
-import co.com.choucair.certification.testtecnical.tasks.OpenUp;
-import co.com.choucair.certification.testtecnical.tasks.Search;
+import co.com.choucair.certification.testtecnical.tasks.*;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
@@ -33,6 +31,8 @@ public class TestTecnicalStepDefinitions {
     @Cuando("^compra vestidos de mujeres$")
     public void compraVestidosDeMujeres(List<TestTecnicalData> testTecnicalData) {
         theActorInTheSpotlight().attemptsTo(Search.the(testTecnicalData));
+        theActorInTheSpotlight().attemptsTo(SeleccionarProducto.deVestidos());
+        theActorInTheSpotlight().attemptsTo(ComprarProducto.enLinea());
     }
 
     @Entonces("ella deberia visualizar que su compra fue exitosa")
