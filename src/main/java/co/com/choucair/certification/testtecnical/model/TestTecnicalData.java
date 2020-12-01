@@ -4,8 +4,9 @@ public class TestTecnicalData {
     private String strUser;
     private String strPassword;
     private String strPrenda;
-    private String strConfirmacion;
     private String strComentario;
+    private String strConfirmacion;
+
 
     public String getStrUser() {
         return strUser;
@@ -31,18 +32,12 @@ public class TestTecnicalData {
         this.strPrenda = strPrenda;
     }
 
-    public String getStrConfirmacion() {
-        return strConfirmacion;
-    }
+    public String getStrComentario() {return strComentario;}
 
-    public void setStrConfirmacion(String strConfirmacion) {
-        this.strConfirmacion = strConfirmacion;
-    }
-    public String getStrComentario() {
-        return strComentario;
-    }
+    public void setStrComentario(String strComentario) { this.strComentario = strComentario;}
 
-    public void setStrComentario(String strComentario) {
-        this.strComentario = strComentario;
-    }
+    public String getStrConfirmacion() { return strConfirmacion; }
+
+    public void setStrConfirmacion(String strConfirmacion) { this.strConfirmacion = strConfirmacion; }
+
 }

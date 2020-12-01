@@ -24,15 +24,15 @@ public class TestTecnicalStepDefinitions {
 
     @Dado("que Claudia quiere buscar vestidos")
     public void queClaudiaQuiereBuscarVestidos(List<TestTecnicalData> testTecnicalData) {
-        theActorCalled("Claudia").wasAbleTo(OpenUp.thePage(), (Login.
-                OnThePage(testTecnicalData.get(0).getStrUser(),testTecnicalData.get(0).getStrPassword())));
+        theActorCalled("Claudia").wasAbleTo(OpenUp.thePage(), (Login.OnThePage(testTecnicalData.get(0).getStrUser(),testTecnicalData.get(0).getStrPassword())));
     }
 
     @Cuando("^compra vestidos de mujeres$")
     public void compraVestidosDeMujeres(List<TestTecnicalData> testTecnicalData) {
         theActorInTheSpotlight().attemptsTo(Search.the(testTecnicalData));
         theActorInTheSpotlight().attemptsTo(SeleccionarProducto.deVestidos());
-        theActorInTheSpotlight().attemptsTo(ComprarProducto.enLinea());
+        theActorInTheSpotlight().attemptsTo(ComprarProducto.enLinea(testTecnicalData.get(0).getStrComentario()));
+
     }
 
     @Entonces("ella deberia visualizar que su compra fue exitosa")
